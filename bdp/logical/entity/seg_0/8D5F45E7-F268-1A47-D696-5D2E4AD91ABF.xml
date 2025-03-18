@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8D5F45E7-F268-1A47-D696-5D2E4AD91ABF" name="Members">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-01 15:05:44 UTC</createdTime>
+<ownerDesignName>bdp</ownerDesignName>
+<engineerTo>
+<item key="44A5853F-0D82-349A-A2E2-331A57B177B2" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="MemberID" id="46D2FCAD-6F6D-5126-871A-68D63C145A3D">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-01 15:05:50 UTC</createdTime>
+<ownerDesignName>bdp</ownerDesignName>
+<engineerTo>
+<item key="44A5853F-0D82-349A-A2E2-331A57B177B2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="FirstName" id="8E4603F3-7ECC-E13A-FC39-92D03391B49F">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-01 15:05:51 UTC</createdTime>
+<ownerDesignName>bdp</ownerDesignName>
+<engineerTo>
+<item key="44A5853F-0D82-349A-A2E2-331A57B177B2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="LastName" id="0CCC89E4-1CE8-4C0D-3F7C-B127F7C4BB1B">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-01 15:05:52 UTC</createdTime>
+<ownerDesignName>bdp</ownerDesignName>
+<engineerTo>
+<item key="44A5853F-0D82-349A-A2E2-331A57B177B2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="RegistrationDate" id="45781F8E-01C2-E6A7-38B6-0F8FC8BC1008">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-01 15:05:57 UTC</createdTime>
+<ownerDesignName>bdp</ownerDesignName>
+<engineerTo>
+<item key="44A5853F-0D82-349A-A2E2-331A57B177B2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ProfileID" id="AC5B7A25-EF61-CF5E-20AD-18B5C921BDD3">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 15:47:21 UTC</createdTime>
+<generatorID>E4F20FB7-6A5D-B510-CD16-DB28697174F4</generatorID>
+<ownerDesignName>bdp</ownerDesignName>
+<engineerTo>
+<item key="44A5853F-0D82-349A-A2E2-331A57B177B2" value="true"/>
+</engineerTo>
+<referedAttribute>56B1FA5C-3A73-F41D-BA6E-E2149A738E0F</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="05C735D6-ADA3-51BB-E17A-AA21C7C53A73" name="Members_PK">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-02 16:44:31 UTC</createdTime>
+<ownerDesignName>bdp</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="44A5853F-0D82-349A-A2E2-331A57B177B2" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<newElementsIDs>46D2FCAD-6F6D-5126-871A-68D63C145A3D</newElementsIDs>
+<usedAttributes>
+<attributeRef>46D2FCAD-6F6D-5126-871A-68D63C145A3D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

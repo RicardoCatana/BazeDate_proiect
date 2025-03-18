@@ -1,0 +1,113 @@
+CREATE TABLE authors (
+    authorid    NUMBER(5) NOT NULL,
+    firstname   VARCHAR2(20) NOT NULL,
+    lastname    VARCHAR2(20) NOT NULL,
+    dateofbirth DATE,
+    nationality VARCHAR2(20)
+);
+
+ALTER TABLE authors
+    ADD CONSTRAINT chk_dateofbirth
+        CHECK ( dateofbirth < TO_DATE('01-JAN-2000', 'DD-MON-YYYY') );
+
+ALTER TABLE authors ADD CONSTRAINT authors_pk PRIMARY KEY ( authorid );
+
+CREATE TABLE books (
+    bookid           NUMBER(5) NOT NULL,
+    title            VARCHAR2(30) NOT NULL,
+    publicationyear  DATE,
+    copiesavailable  NUMBER(5),
+    numberofpages    NUMBER(5),
+    language         VARCHAR2(20),
+    authors_authorid NUMBER(5) NOT NULL,
+    genres_genreid   NUMBER(5) NOT NULL
+);
+
+ALTER TABLE books
+    ADD CONSTRAINT chk_publicationyear
+        CHECK ( EXTRACT(YEAR FROM publicationyear) < 2025 );
+
+ALTER TABLE books ADD CONSTRAINT chk_copiesavailable CHECK ( copiesavailable >= 0 );
+
+ALTER TABLE books ADD CONSTRAINT chk_numberofpages CHECK ( numberofpages > 0 );
+
+ALTER TABLE books ADD CONSTRAINT books_pk PRIMARY KEY ( bookid );
+
+ALTER TABLE books ADD CONSTRAINT un_title UNIQUE ( title );
+
+CREATE TABLE borrowings (
+    borrowingid      NUMBER(5) NOT NULL,
+    borrowdate       DATE NOT NULL,
+    returndate       DATE NOT NULL,
+    status           VARCHAR2(20),
+    books_bookid     NUMBER(5) NOT NULL,
+    members_memberid NUMBER(5) NOT NULL
+);
+
+ALTER TABLE borrowings ADD CONSTRAINT chk_returndate CHECK ( returndate >= borrowdate );
+
+ALTER TABLE borrowings
+    ADD CONSTRAINT chk_status CHECK ( status IN ( 'borrowed', 'returned' ) );
+
+ALTER TABLE borrowings ADD CONSTRAINT borrowings_pk PRIMARY KEY ( borrowingid );
+
+CREATE TABLE genres (
+    genreid   NUMBER(5) NOT NULL,
+    genrename VARCHAR2(20)
+);
+
+ALTER TABLE genres ADD CONSTRAINT genres_pk PRIMARY KEY ( genreid );
+
+CREATE TABLE memberprofile (
+    profileid        NUMBER(5) NOT NULL,
+    email            VARCHAR2(30),
+    phonenumber      VARCHAR2(10) NOT NULL,
+    membershipstatus VARCHAR2(20) NOT NULL
+);
+
+ALTER TABLE memberprofile
+    ADD CONSTRAINT chk_phonenumber
+        CHECK ( length(phonenumber) = 10
+                AND phonenumber LIKE '07%'
+                AND REGEXP_LIKE ( phonenumber,
+                                  '^[0-9]+$' ) );
+
+ALTER TABLE memberprofile ADD CONSTRAINT chk_email CHECK ( email LIKE '%@gmail.com' );
+
+ALTER TABLE memberprofile ADD CONSTRAINT memberprofile_pk PRIMARY KEY ( profileid );
+
+ALTER TABLE memberprofile ADD CONSTRAINT un_phonenumber UNIQUE ( phonenumber );
+
+ALTER TABLE memberprofile ADD CONSTRAINT un_email UNIQUE ( email );
+
+CREATE TABLE members (
+    memberid                NUMBER(5) NOT NULL,
+    firstname               VARCHAR2(20) NOT NULL,
+    lastname                VARCHAR2(20) NOT NULL,
+    registrationdate        DATE NOT NULL,
+    memberprofile_profileid NUMBER(5) NOT NULL
+);
+
+ALTER TABLE members ADD CONSTRAINT members_pk PRIMARY KEY ( memberid );
+
+ALTER TABLE books
+    ADD CONSTRAINT books_authors_fk FOREIGN KEY ( authors_authorid )
+        REFERENCES authors ( authorid );
+
+ALTER TABLE books
+    ADD CONSTRAINT books_genres_fk FOREIGN KEY ( genres_genreid )
+        REFERENCES genres ( genreid );
+
+ALTER TABLE borrowings
+    ADD CONSTRAINT borrowings_books_fk FOREIGN KEY ( books_bookid )
+        REFERENCES books ( bookid );
+
+ALTER TABLE borrowings
+    ADD CONSTRAINT borrowings_members_fk FOREIGN KEY ( members_memberid )
+        REFERENCES members ( memberid );
+
+ALTER TABLE members
+    ADD CONSTRAINT members_memberprofile_fk FOREIGN KEY ( memberprofile_profileid )
+        REFERENCES memberprofile ( profileid );
+
+

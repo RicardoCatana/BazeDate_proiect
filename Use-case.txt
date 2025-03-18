@@ -1,0 +1,54 @@
+--Adaugarea unei noi carti si actualizarea stocului
+BEGIN;
+
+INSERT INTO books (bookid, title, publicationyear, copiesavailable, numberofpages, language, authors_authorid, genres_genreid)
+VALUES (6, 'The New Dawn', TO_DATE('2023-10-15', 'YYYY-MM-DD'), 0, 320, 'English', 1, 1);
+
+UPDATE books
+SET copiesavailable = 15
+WHERE bookid = 6;
+COMMIT;
+
+
+
+
+--Imprumutarea unei carti
+BEGIN;
+UPDATE books
+SET copiesavailable = copiesavailable - 1
+WHERE bookid = 1 AND copiesavailable > 0;
+
+INSERT INTO borrowings (borrowingid, borrowdate, returndate, status, books_bookid, members_memberid)
+VALUES (10, TO_DATE('2025-01-05', 'YYYY-MM-DD'), TO_DATE('2025-02-05', 'YYYY-MM-DD'), 'borrowed', 1, 1);
+
+COMMIT;
+
+
+
+--Returnarea unei carti
+BEGIN;
+
+UPDATE borrowings
+SET status = 'returned'
+WHERE borrowingid = 10;
+
+UPDATE books
+SET copiesavailable = copiesavailable + 1
+WHERE bookid = 1;
+
+COMMIT;
+
+
+
+
+--Adaugarea unui nou membru
+BEGIN;
+
+INSERT INTO memberprofile (profileid, email, phonenumber, membershipstatus)
+VALUES (7, 'new.user@gmail.com', '0745123456', 'active');
+
+INSERT INTO members (memberid, firstname, lastname, registrationdate, memberprofile_profileid)
+VALUES (7, 'Alice', 'Johnson', TO_DATE('2025-01-01', 'YYYY-MM-DD'), 7);
+
+COMMIT;
+

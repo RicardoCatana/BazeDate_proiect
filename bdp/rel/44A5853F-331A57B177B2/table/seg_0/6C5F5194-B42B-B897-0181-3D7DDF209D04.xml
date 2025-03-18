@@ -1,0 +1,96 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6C5F5194-B42B-B897-0181-3D7DDF209D04" name="Authors">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 15:22:46 UTC</createdTime>
+<generatorID>CE43C389-2C18-44B1-F122-802F1DAAA0B9</generatorID>
+<ownerDesignName>bdp</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="AuthorID" id="681034C5-5E1D-3DAD-DB07-9DB11037E838">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 15:22:46 UTC</createdTime>
+<generatorID>72C1C5AE-4BE8-9EF9-35D6-7617E65A4197</generatorID>
+<ownerDesignName>bdp</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FirstName" id="649145A2-71B8-8E43-2DB2-5E0F8A4489E4">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 15:22:46 UTC</createdTime>
+<generatorID>66265DDC-45C9-72D2-4E80-2635D8345DEA</generatorID>
+<ownerDesignName>bdp</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LastName" id="2CB4FC8F-3038-E657-D510-32E9F3E63C24">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 15:22:46 UTC</createdTime>
+<generatorID>15177A40-1F5C-3407-D8C0-F1DA871EB74D</generatorID>
+<ownerDesignName>bdp</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DateOfBirth" id="ADEE2C10-3FB6-C05E-21A2-9C1AEFB19253">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 15:22:46 UTC</createdTime>
+<generatorID>C4484462-9532-72B8-948E-2FE52079741A</generatorID>
+<ownerDesignName>bdp</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nationality" id="A228FFA4-7605-FE5B-6FD4-BB63DDA1BCC5">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 15:22:46 UTC</createdTime>
+<generatorID>AF8875FE-07BF-E6AF-C44E-913FD6C46350</generatorID>
+<ownerDesignName>bdp</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F18F3D81-A94D-9092-88C6-DC84DA9B4240" name="Authors_PK">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 15:22:46 UTC</createdTime>
+<generatorID>AA24FF30-FE05-C16B-1788-19AE361F2EE0</generatorID>
+<ownerDesignName>bdp</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="681034C5-5E1D-3DAD-DB07-9DB11037E838"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="CHK_DateOfBirth" directorySegmentName="seg_0" id="C11CFC4F-3F0F-948E-86B4-AEF0F6D24B2F">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 15:59:09 UTC</createdTime>
+<ownerDesignName>bdp</ownerDesignName>
+<rule><![CDATA[DateOfBirth < TO_DATE('01-JAN-2000', 'DD-MON-YYYY')
+]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

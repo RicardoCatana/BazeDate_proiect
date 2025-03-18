@@ -1,0 +1,39 @@
+-- 1. TESTARE PRIMARY KEY
+    INSERT INTO authors (authorid, firstname, lastname, dateofbirth, nationality)
+    VALUES (1, 'Duplicate', 'Author', TO_DATE('1970-01-01', 'YYYY-MM-DD'), 'Unknown');
+
+
+
+-- 2. TESTARE FOREIGN KEY
+    INSERT INTO books (bookid, title, publicationyear, copiesavailable, numberofpages, language, authors_authorid, genres_genreid)
+    VALUES (999, 'Invalid Book', TO_DATE('2023-01-01', 'YYYY-MM-DD'), 5, 300, 'English', 999, 1);
+
+
+
+-- 3. TESTARE CONSTRÂNGERI DE TIP CHECK
+-- CHK_DateOfBirth
+    INSERT INTO authors (authorid, firstname, lastname, dateofbirth, nationality)
+    VALUES (999, 'Future Author', 'Test', TO_DATE('2025-01-01', 'YYYY-MM-DD'), 'Unknown');
+
+-- CHK_NumberOfPages
+    INSERT INTO books (bookid, title, publicationyear, copiesavailable, numberofpages, language, authors_authorid, genres_genreid)
+    VALUES (1001, 'Invalid Pages', TO_DATE('2023-01-01', 'YYYY-MM-DD'), 5, -10, 'English', 1, 1);
+
+-- CHK_Status
+    INSERT INTO borrowings (borrowingid, borrowdate, returndate, status, books_bookid, members_memberid)
+    VALUES (1001, TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2023-01-10', 'YYYY-MM-DD'), 'invalid_status', 1, 1);
+
+-- CHK_Email
+    INSERT INTO memberprofile (profileid, email, phonenumber, membershipstatus)
+    VALUES (999, 'invalid.email@yahoo.com', '0712345678', 'active');
+
+-- CHK_PhoneNumber
+    INSERT INTO memberprofile (profileid, email, phonenumber, membershipstatus)
+    VALUES (1000, 'valid@gmail.com', '1234567890', 'active');
+
+
+
+-- 4. TESTARE CONSTRÂNGERI UNIQUE
+-- EMAIL
+    INSERT INTO memberprofile (profileid, email, phonenumber, membershipstatus)
+    VALUES (1001, 'ocu.eusebiu@gmail.com', '0799999999', 'active');

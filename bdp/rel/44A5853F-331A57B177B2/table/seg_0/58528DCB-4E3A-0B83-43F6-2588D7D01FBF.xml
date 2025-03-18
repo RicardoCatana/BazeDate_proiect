@@ -1,0 +1,187 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="58528DCB-4E3A-0B83-43F6-2588D7D01FBF" name="Books">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 15:22:46 UTC</createdTime>
+<generatorID>A3EDF69E-5BF7-91D6-474C-AA51124FE794</generatorID>
+<ownerDesignName>bdp</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="BookID" id="52BACAB7-410B-6950-0E6C-D9D857063F9D">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 15:22:46 UTC</createdTime>
+<generatorID>8BFEDC1D-70FC-5FEA-02F2-BD85D00A2D9A</generatorID>
+<ownerDesignName>bdp</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Title" id="6290D6DD-50A4-2C08-A584-9E8A5F4FD6C7">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 15:22:46 UTC</createdTime>
+<generatorID>A2F6FA98-B65C-9C23-13B6-30C7187AD933</generatorID>
+<ownerDesignName>bdp</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PublicationYear" id="78553157-BE77-0266-9E35-D1A1C3639E2F">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 15:22:46 UTC</createdTime>
+<generatorID>3C4CBBB0-6996-504A-4EBF-FED3F675A48B</generatorID>
+<ownerDesignName>bdp</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CopiesAvailable" id="CA99D86E-A3B2-C782-658D-74B78FB08E98">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 15:22:46 UTC</createdTime>
+<generatorID>17901645-F5A5-495B-C078-E1852C0009BB</generatorID>
+<ownerDesignName>bdp</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NumberOfPages" id="4C597D7F-B573-4AB7-6AEE-2C4D39514EB6">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 15:22:46 UTC</createdTime>
+<generatorID>879A4747-F2B1-2AC4-C011-C0C12F77755F</generatorID>
+<ownerDesignName>bdp</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Language" id="9E89BCF0-834F-A0CB-43DD-1AA26AE51091">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 15:22:46 UTC</createdTime>
+<generatorID>3E3B6774-9ADB-EFB7-6A61-A3186585EB69</generatorID>
+<ownerDesignName>bdp</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Authors_AuthorID" id="1BDC47AB-76A8-F11D-F621-7C0730DF5EC4">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 15:22:46 UTC</createdTime>
+<generatorID>49427A17-9E22-7ED7-7E71-2372F7FAF9C0</generatorID>
+<ownerDesignName>bdp</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="ED3FE0F9-1F9F-37C8-6C0C-6DFB0BCE8D00" referredColumn="681034C5-5E1D-3DAD-DB07-9DB11037E838"/>
+</associations>
+</Column>
+<Column name="Genres_GenreID" id="5D01AD00-5DC8-2931-5F75-7EE26883CCC2">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 15:47:35 UTC</createdTime>
+<generatorID>4DBA18A6-BC7F-8177-0B2D-CABBC8AEB1FD</generatorID>
+<ownerDesignName>bdp</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="46D09791-4E34-7E20-43CF-AC27A231860E" referredColumn="8B0BEC6B-D639-5349-83D7-D77FA65AABBE"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B3E2497D-12EB-07D6-9EC2-4703CDE0A10D" name="Books_PK">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 15:22:46 UTC</createdTime>
+<generatorID>F4354E27-ADB0-EE17-9D57-C5BD0E15D89D</generatorID>
+<ownerDesignName>bdp</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="52BACAB7-410B-6950-0E6C-D9D857063F9D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E5683AF4-7BC5-9B7E-C0B7-931BEB9CAE36" name="UN_Title">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 16:19:48 UTC</createdTime>
+<ownerDesignName>bdp</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6290D6DD-50A4-2C08-A584-9E8A5F4FD6C7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0F0F9019-E154-5801-CA64-63F88AAF4D6E" name="Books_Authors_FK">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 15:22:46 UTC</createdTime>
+<generatorID>F8A25328-0C68-4D97-2C72-EDE5326AB293</generatorID>
+<ownerDesignName>bdp</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1BDC47AB-76A8-F11D-F621-7C0730DF5EC4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AE79D1FD-D0C8-B785-4DFA-33E7ACFB128C" name="Books_Genres_FK">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 15:47:35 UTC</createdTime>
+<generatorID>905BD396-946C-5D6F-9AE7-CF6A880B9D19</generatorID>
+<ownerDesignName>bdp</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5D01AD00-5DC8-2931-5F75-7EE26883CCC2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="CHK_PublicationYear" directorySegmentName="seg_0" id="C1A664BE-1CF6-D25E-A5CC-EBBB8241C6D5">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 16:09:15 UTC</createdTime>
+<ownerDesignName>bdp</ownerDesignName>
+<rule><![CDATA[PublicationYear < EXTRACT(YEAR FROM SYSDATE)
+]]></rule>
+</tableCheckConstraint>
+<tableCheckConstraint name="CHK_CopiesAvailable" directorySegmentName="seg_0" id="7FC87537-64DA-AD4A-3ED5-2E35AEF7B11B">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 16:09:15 UTC</createdTime>
+<ownerDesignName>bdp</ownerDesignName>
+<rule><![CDATA[CopiesAvailable >= 0
+]]></rule>
+</tableCheckConstraint>
+<tableCheckConstraint name="CHK_NumberOfPages" directorySegmentName="seg_0" id="DE87C910-7053-4FCE-46AF-5842A30BBE46">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 16:09:15 UTC</createdTime>
+<ownerDesignName>bdp</ownerDesignName>
+<rule><![CDATA[NumberOfPages > 0]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

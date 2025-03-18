@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Books_FK" directorySegmentName="seg_0" id="89CDAE23-E96F-1E03-9374-7E160A33CFDA">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 14:51:40 UTC</createdTime>
+<ownerDesignName>bdp</ownerDesignName>
+<engineerTo>
+<item key="44A5853F-0D82-349A-A2E2-331A57B177B2" value="true"/>
+</engineerTo>
+<sourcePk>F4354E27-ADB0-EE17-9D57-C5BD0E15D89D</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>A3EDF69E-5BF7-91D6-474C-AA51124FE794</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>A305CE76-65A2-5568-0B6F-F74B8AF0B864</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,150 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AD14997D-8784-3853-DFA6-FBF1BEA7657E" name="Borrowings">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 15:22:46 UTC</createdTime>
+<generatorID>A305CE76-65A2-5568-0B6F-F74B8AF0B864</generatorID>
+<ownerDesignName>bdp</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="BorrowingID" id="229A13E2-B6E7-8FE9-8551-192E49EE8D17">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 15:22:46 UTC</createdTime>
+<generatorID>C8F0055B-F6CB-065A-2D5E-AFE9DD6C1A04</generatorID>
+<ownerDesignName>bdp</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BorrowDate" id="E2FED881-C675-C6AC-ABB1-35C16221EAB6">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 15:22:46 UTC</createdTime>
+<generatorID>753AB337-2923-2867-8FC5-24F8A337FEE5</generatorID>
+<ownerDesignName>bdp</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ReturnDate" id="0CC49AF3-6A9A-AFED-9F68-0EFF41211361">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 15:22:46 UTC</createdTime>
+<generatorID>6AD269EB-070E-8DFE-8B72-EF1933C28A19</generatorID>
+<ownerDesignName>bdp</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Status" id="8FDDCC65-288B-D42E-E078-86F83121CA5E">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 15:22:46 UTC</createdTime>
+<generatorID>55498610-76C7-1AA4-0695-EEA4A87B5C77</generatorID>
+<ownerDesignName>bdp</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Books_BookID" id="023CECA2-53ED-681A-A291-D183AFB9AA9D">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 15:22:46 UTC</createdTime>
+<generatorID>C1EA95FB-FC73-33F1-8993-145B55A71F9F</generatorID>
+<ownerDesignName>bdp</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A30487B9-6C56-2371-06BB-BCD3BFAB9440" referredColumn="52BACAB7-410B-6950-0E6C-D9D857063F9D"/>
+</associations>
+</Column>
+<Column name="Members_MemberID" id="17E321FD-0EEC-83EC-55E8-86DD79400ED0">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 15:22:46 UTC</createdTime>
+<generatorID>A33CD9D8-1D07-E99B-4003-2084BC24FBC6</generatorID>
+<ownerDesignName>bdp</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="108C5C8A-96AF-102F-C013-FAB39E79BD37" referredColumn="5989EDF6-6BCB-024F-08B5-0734B6CB00A2"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B3E590D0-C3A3-11DA-6628-642E9528E21E" name="Borrowings_PK">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 15:22:46 UTC</createdTime>
+<generatorID>D4177018-F720-1153-0CB9-F245D17FC0CA</generatorID>
+<ownerDesignName>bdp</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="229A13E2-B6E7-8FE9-8551-192E49EE8D17"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="72D395AC-2568-DA0E-9F45-EC3EB51C0FF4" name="Borrowings_Books_FK">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 15:22:46 UTC</createdTime>
+<generatorID>89CDAE23-E96F-1E03-9374-7E160A33CFDA</generatorID>
+<ownerDesignName>bdp</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="023CECA2-53ED-681A-A291-D183AFB9AA9D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9463D7CA-1EA7-7070-1C2D-0913C86C0F48" name="Borrowings_Members_FK">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 15:22:46 UTC</createdTime>
+<generatorID>5E5DA853-66B6-4B0A-41E2-A892E3A785F3</generatorID>
+<ownerDesignName>bdp</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="17E321FD-0EEC-83EC-55E8-86DD79400ED0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="CHK_BorrowDate" directorySegmentName="seg_0" id="9B210B15-66D0-6BE4-85F1-7954E52B2662">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 16:13:28 UTC</createdTime>
+<ownerDesignName>bdp</ownerDesignName>
+<rule><![CDATA[BorrowDate <= SYSDATE
+]]></rule>
+</tableCheckConstraint>
+<tableCheckConstraint name="CHK_ReturnDate" directorySegmentName="seg_0" id="30365B0A-2CB0-84A4-9ACD-058744B3B6FB">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 16:13:28 UTC</createdTime>
+<ownerDesignName>bdp</ownerDesignName>
+<rule><![CDATA[ReturnDate >= BorrowDate
+]]></rule>
+</tableCheckConstraint>
+<tableCheckConstraint name="CHK_Status" directorySegmentName="seg_0" id="1CD1C49E-4D16-8EA6-9759-A25D30139C80">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 16:13:28 UTC</createdTime>
+<ownerDesignName>bdp</ownerDesignName>
+<rule><![CDATA[Status IN ('borrowed', 'returned')
+]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

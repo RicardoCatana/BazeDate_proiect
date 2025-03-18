@@ -1,0 +1,115 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A305CE76-65A2-5568-0B6F-F74B8AF0B864" name="Borrowings">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-01 15:08:50 UTC</createdTime>
+<ownerDesignName>bdp</ownerDesignName>
+<engineerTo>
+<item key="44A5853F-0D82-349A-A2E2-331A57B177B2" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="BorrowingID" id="C8F0055B-F6CB-065A-2D5E-AFE9DD6C1A04">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-01 15:08:58 UTC</createdTime>
+<ownerDesignName>bdp</ownerDesignName>
+<engineerTo>
+<item key="44A5853F-0D82-349A-A2E2-331A57B177B2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="BorrowDate" id="753AB337-2923-2867-8FC5-24F8A337FEE5">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-01 15:09:08 UTC</createdTime>
+<ownerDesignName>bdp</ownerDesignName>
+<engineerTo>
+<item key="44A5853F-0D82-349A-A2E2-331A57B177B2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ReturnDate" id="6AD269EB-070E-8DFE-8B72-EF1933C28A19">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-01 15:09:10 UTC</createdTime>
+<ownerDesignName>bdp</ownerDesignName>
+<engineerTo>
+<item key="44A5853F-0D82-349A-A2E2-331A57B177B2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Status" id="55498610-76C7-1AA4-0695-EEA4A87B5C77">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-01 15:09:19 UTC</createdTime>
+<ownerDesignName>bdp</ownerDesignName>
+<engineerTo>
+<item key="44A5853F-0D82-349A-A2E2-331A57B177B2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="BookID" id="C1EA95FB-FC73-33F1-8993-145B55A71F9F">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 14:51:40 UTC</createdTime>
+<generatorID>89CDAE23-E96F-1E03-9374-7E160A33CFDA</generatorID>
+<ownerDesignName>bdp</ownerDesignName>
+<engineerTo>
+<item key="44A5853F-0D82-349A-A2E2-331A57B177B2" value="true"/>
+</engineerTo>
+<referedAttribute>8BFEDC1D-70FC-5FEA-02F2-BD85D00A2D9A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="MemberID" id="A33CD9D8-1D07-E99B-4003-2084BC24FBC6">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 14:51:52 UTC</createdTime>
+<generatorID>5E5DA853-66B6-4B0A-41E2-A892E3A785F3</generatorID>
+<ownerDesignName>bdp</ownerDesignName>
+<engineerTo>
+<item key="44A5853F-0D82-349A-A2E2-331A57B177B2" value="true"/>
+</engineerTo>
+<referedAttribute>46D2FCAD-6F6D-5126-871A-68D63C145A3D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D4177018-F720-1153-0CB9-F245D17FC0CA" name="Borrowings_PK">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-02 16:45:11 UTC</createdTime>
+<ownerDesignName>bdp</ownerDesignName>
+<engineerTo>
+<item key="44A5853F-0D82-349A-A2E2-331A57B177B2" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<newElementsIDs>C8F0055B-F6CB-065A-2D5E-AFE9DD6C1A04</newElementsIDs>
+<usedAttributes>
+<attributeRef>C8F0055B-F6CB-065A-2D5E-AFE9DD6C1A04</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

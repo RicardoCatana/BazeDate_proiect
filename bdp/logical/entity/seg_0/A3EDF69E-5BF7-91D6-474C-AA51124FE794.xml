@@ -1,0 +1,159 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A3EDF69E-5BF7-91D6-474C-AA51124FE794" name="Books">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-01 15:01:21 UTC</createdTime>
+<ownerDesignName>bdp</ownerDesignName>
+<engineerTo>
+<item key="44A5853F-0D82-349A-A2E2-331A57B177B2" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="BookID" id="8BFEDC1D-70FC-5FEA-02F2-BD85D00A2D9A">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-01 15:01:27 UTC</createdTime>
+<ownerDesignName>bdp</ownerDesignName>
+<engineerTo>
+<item key="44A5853F-0D82-349A-A2E2-331A57B177B2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Title" id="A2F6FA98-B65C-9C23-13B6-30C7187AD933">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-01 15:01:28 UTC</createdTime>
+<ownerDesignName>bdp</ownerDesignName>
+<engineerTo>
+<item key="44A5853F-0D82-349A-A2E2-331A57B177B2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PublicationYear" id="3C4CBBB0-6996-504A-4EBF-FED3F675A48B">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-01 15:02:28 UTC</createdTime>
+<ownerDesignName>bdp</ownerDesignName>
+<engineerTo>
+<item key="44A5853F-0D82-349A-A2E2-331A57B177B2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CopiesAvailable" id="17901645-F5A5-495B-C078-E1852C0009BB">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-01 15:02:28 UTC</createdTime>
+<ownerDesignName>bdp</ownerDesignName>
+<engineerTo>
+<item key="44A5853F-0D82-349A-A2E2-331A57B177B2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NumberOfPages" id="879A4747-F2B1-2AC4-C011-C0C12F77755F">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-01 15:03:50 UTC</createdTime>
+<ownerDesignName>bdp</ownerDesignName>
+<engineerTo>
+<item key="44A5853F-0D82-349A-A2E2-331A57B177B2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Language" id="3E3B6774-9ADB-EFB7-6A61-A3186585EB69">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-01 15:03:51 UTC</createdTime>
+<ownerDesignName>bdp</ownerDesignName>
+<engineerTo>
+<item key="44A5853F-0D82-349A-A2E2-331A57B177B2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="AuthorID" id="49427A17-9E22-7ED7-7E71-2372F7FAF9C0">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 14:46:23 UTC</createdTime>
+<generatorID>F8A25328-0C68-4D97-2C72-EDE5326AB293</generatorID>
+<ownerDesignName>bdp</ownerDesignName>
+<engineerTo>
+<item key="44A5853F-0D82-349A-A2E2-331A57B177B2" value="true"/>
+</engineerTo>
+<referedAttribute>72C1C5AE-4BE8-9EF9-35D6-7617E65A4197</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Stock" id="CA0E5299-53D4-DDC2-ADBE-A1552DB19A04">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 15:02:52 UTC</createdTime>
+<ownerDesignName>bdp</ownerDesignName>
+<engineerTo>
+<item key="44A5853F-0D82-349A-A2E2-331A57B177B2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="GenreID" id="4DBA18A6-BC7F-8177-0B2D-CABBC8AEB1FD">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 15:41:05 UTC</createdTime>
+<generatorID>905BD396-946C-5D6F-9AE7-CF6A880B9D19</generatorID>
+<ownerDesignName>bdp</ownerDesignName>
+<engineerTo>
+<item key="44A5853F-0D82-349A-A2E2-331A57B177B2" value="true"/>
+</engineerTo>
+<referedAttribute>DC7082F3-F253-FAF3-7F2A-3A2ABB44DBC8</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="F4354E27-ADB0-EE17-9D57-C5BD0E15D89D" name="Books_PK">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-02 16:43:33 UTC</createdTime>
+<ownerDesignName>bdp</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="44A5853F-0D82-349A-A2E2-331A57B177B2" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<newElementsIDs>8BFEDC1D-70FC-5FEA-02F2-BD85D00A2D9A</newElementsIDs>
+<usedAttributes>
+<attributeRef>8BFEDC1D-70FC-5FEA-02F2-BD85D00A2D9A</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

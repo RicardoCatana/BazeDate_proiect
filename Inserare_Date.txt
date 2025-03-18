@@ -1,0 +1,46 @@
+-- GENRES
+INSERT INTO genres (genreid, genrename) VALUES (1, 'Fantasy');
+INSERT INTO genres VALUES (2, 'Philosophical');
+INSERT INTO genres VALUES (3, 'Psychological');
+INSERT INTO genres VALUES (4, 'Horror');
+INSERT INTO genres VALUES (5, 'Science Fiction');
+
+-- AUTHORS
+INSERT INTO authors (authorid, firstname, lastname, dateofbirth, nationality)
+VALUES (1, 'George', 'R.R. Martin', TO_DATE('1948-09-20', 'YYYY-MM-DD'), 'American');
+INSERT INTO authors VALUES (2, 'Friedrich', 'Nietzsche', TO_DATE('1844-10-15', 'YYYY-MM-DD'), 'German');
+INSERT INTO authors VALUES (3, 'Fyodor', 'Dostoevsky', TO_DATE('1821-11-11', 'YYYY-MM-DD'), 'Russian');
+INSERT INTO authors VALUES (4, 'Stephen', 'King', TO_DATE('1947-02-21', 'YYYY-MM-DD'), 'American');
+INSERT INTO authors VALUES (5, 'Marian', 'Coman', TO_DATE('1977-05-21', 'YYYY-MM-DD'), 'Romanian');
+
+-- MEMBERPROFILE`
+INSERT INTO memberprofile (profileid, email, phonenumber, membershipstatus)
+VALUES (1, 'ocu.eusebiu@gmail.com', '0712345678', 'active');
+INSERT INTO memberprofile VALUES (2, 'surdu.gabriel@gmail.com', '0787654321', 'inactive');
+INSERT INTO memberprofile VALUES (3, 'codrin.fortoes@gmail.com', '0787654521', 'inactive');
+INSERT INTO memberprofile VALUES (4, 'chihalau.gabriel@gmail.com', '0787674321', 'inactive');
+INSERT INTO memberprofile VALUES (5, 'erhan.robert@gmail.com', '0787654921', 'inactive');
+
+-- MEMBERS
+INSERT INTO members (memberid, firstname, lastname, registrationdate, memberprofile_profileid)
+VALUES (1, 'Eusebiu', 'Ocu', TO_DATE('2020-01-01', 'YYYY-MM-DD'), 1);
+INSERT INTO members VALUES (2, 'Gabriel', 'Surdu', TO_DATE('2020-03-11', 'YYYY-MM-DD'), 2);
+INSERT INTO members VALUES (3, 'Codrin', 'Fortoes', TO_DATE('2021-09-13', 'YYYY-MM-DD'), 3);
+INSERT INTO members VALUES (4, 'Cabral', 'Chihalau', TO_DATE('2022-05-14', 'YYYY-MM-DD'), 4);
+INSERT INTO members VALUES (5, 'Robert', 'Erhan', TO_DATE('2023-11-15', 'YYYY-MM-DD'), 5);
+
+-- BOOKS
+INSERT INTO books (bookid, title, publicationyear, copiesavailable, numberofpages, language, authors_authorid, genres_genreid)
+VALUES (1, 'A Game of Thrones', TO_DATE('1996-08-01', 'YYYY-MM-DD'), 3, 694, 'English', 1, 1);
+INSERT INTO books VALUES (2, 'Thus Spoke Zarathustra', TO_DATE('1883-03-12', 'YYYY-MM-DD'), 1, 402, 'English', 2, 2);
+INSERT INTO books VALUES (3, 'The Gambler', TO_DATE('1867-12-02', 'YYYY-MM-DD'), 7, 378, 'Russian', 3, 3);
+INSERT INTO books VALUES (4, 'IT', TO_DATE('1986-09-06', 'YYYY-MM-DD'), 5, 1034, 'Romanian', 4, 4);
+INSERT INTO books VALUES (5, 'Omuletul din perete', TO_DATE('2011-09-22', 'YYYY-MM-DD'), 3, 512, 'Romanian', 5, 5);
+
+-- BORROWINGS
+INSERT INTO borrowings (borrowingid, borrowdate, returndate, status, books_bookid, members_memberid)
+VALUES (1, TO_DATE('2021-05-01', 'YYYY-MM-DD'), TO_DATE('2021-06-01', 'YYYY-MM-DD'), 'returned', 1, 1);
+INSERT INTO borrowings VALUES (2, TO_DATE('2022-06-04', 'YYYY-MM-DD'), TO_DATE('2022-06-20', 'YYYY-MM-DD'), 'returned', 2, 2);
+INSERT INTO borrowings VALUES (3, TO_DATE('2023-06-04', 'YYYY-MM-DD'), TO_DATE('2023-06-20', 'YYYY-MM-DD'), 'returned', 3, 3);
+INSERT INTO borrowings VALUES (4, TO_DATE('2024-12-01', 'YYYY-MM-DD'), TO_DATE('2024-12-12', 'YYYY-MM-DD'), 'borrowed', 4, 4);
+INSERT INTO borrowings VALUES (5, TO_DATE('2024-12-11', 'YYYY-MM-DD'), TO_DATE('2025-01-01', 'YYYY-MM-DD'), 'borrowed', 5, 5);

@@ -1,0 +1,111 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7C6CE347-A791-1298-7AD7-A25FA1B511FA" name="MemberProfile">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 15:47:35 UTC</createdTime>
+<generatorID>01666BA1-6A92-A797-3715-BCFC707FF1B3</generatorID>
+<ownerDesignName>bdp</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ProfileID" id="2C81106F-53C6-F8B6-103F-76AE6F8FA57F">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 15:47:35 UTC</createdTime>
+<generatorID>56B1FA5C-3A73-F41D-BA6E-E2149A738E0F</generatorID>
+<ownerDesignName>bdp</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Email" id="EEBA6A2B-1FE3-A09E-7334-917F8E17C665">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 15:47:35 UTC</createdTime>
+<generatorID>8CBBE156-11EF-CAAF-932A-76EDDE1B8750</generatorID>
+<ownerDesignName>bdp</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PhoneNumber" id="73D280F0-2737-3789-E64B-F95D73D1E7DE">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 15:47:35 UTC</createdTime>
+<generatorID>A3A33A0A-E7E9-A3A0-F38F-ECCE873BE5AB</generatorID>
+<ownerDesignName>bdp</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MembershipStatus" id="DE69F7EC-44A9-F13F-A435-7772699B215B">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 15:47:35 UTC</createdTime>
+<generatorID>2DF7D4DC-7F48-865B-E82F-7CA52CE39344</generatorID>
+<ownerDesignName>bdp</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="76895E00-5933-B0A7-FF1F-3D7EC399A589" name="MemberProfile_PK">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 15:47:35 UTC</createdTime>
+<generatorID>7F06F65D-CC23-B510-8E4E-A3EC51DA62A0</generatorID>
+<ownerDesignName>bdp</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2C81106F-53C6-F8B6-103F-76AE6F8FA57F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1A1E4162-936F-759A-1897-FB1AA30A31D0" name="UN_PhoneNumber">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 16:16:12 UTC</createdTime>
+<ownerDesignName>bdp</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="73D280F0-2737-3789-E64B-F95D73D1E7DE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EFC1EA4E-B6B3-7E6A-EF6D-08598569A9E6" name="UN_Email">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 16:20:34 UTC</createdTime>
+<ownerDesignName>bdp</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EEBA6A2B-1FE3-A09E-7334-917F8E17C665"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="CHK_PhoneNumber" directorySegmentName="seg_0" id="45020D58-DE7A-426A-1E68-B37DA09B0015">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 16:11:16 UTC</createdTime>
+<ownerDesignName>bdp</ownerDesignName>
+<rule><![CDATA[LENGTH(PhoneNumber) = 10 AND PhoneNumber LIKE '07%' AND REGEXP_LIKE(PhoneNumber, '^[0-9]+$')
+]]></rule>
+</tableCheckConstraint>
+<tableCheckConstraint name="CHK_Email" directorySegmentName="seg_0" id="D489F98F-C825-7BD4-74CA-1D5CF4674F29">
+<createdBy>ricky</createdBy>
+<createdTime>2025-01-03 16:11:16 UTC</createdTime>
+<ownerDesignName>bdp</ownerDesignName>
+<rule><![CDATA[Email LIKE '%@gmail.com'
+]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>
